@@ -1,0 +1,6 @@
+<template name="layout">
+	{{#if currentUser}}
+	<a id="logout-link" href="">Salir</a>
+	{{/if}}
+	{{>yield}}
+</template>
