@@ -1,3 +1,18 @@
 <template name="home">
-	
+	<h2>Tradicionales</h2>
+	{{#each productTraditional}}
+		{{> tradicionales}}
+	{{/each}}
+	<h2>Chorreados</h2>
+	{{#each productChorreado}}
+		{{> chorreados}}
+	{{/each}}
+	<h2>Extras</h2>
+	{{#each productExtra}}
+		{{> extras}}
+	{{/each}}
+
+	<div id="pre-order">
+		
+	</div>
 </template>

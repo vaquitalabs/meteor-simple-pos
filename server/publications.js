@@ -1,3 +1,3 @@
-Meteor.publish('pruducts', () =>{
+Meteor.publish('products', () =>{
 	return Products.find();
 })

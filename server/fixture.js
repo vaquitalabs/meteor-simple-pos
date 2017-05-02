@@ -3,91 +3,91 @@ if (Products.find().count() === 0) {
 	let defaultProducts = [
 		{
 			name:'Elote Chico',
-			Category:'Tradicionales',
+			category:'Tradicionales',
 			price:2500,
 			label:'Chico',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Elote Mediano',
-			Category:'Tradicionales',
+			category:'Tradicionales',
 			price:3000,
 			label:'Mediano',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Elote Medio litro',
-			Category:'Tradicionales',
+			category:'Tradicionales',
 			price:4500,
 			label:'Medio Litro',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Maruchan',
-			Category:'Tradicionales',
+			category:'Tradicionales',
 			price:3500,
 			label:'Maruchan',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Dorinachos',
-			Category:'Tradicionales',
+			category:'Tradicionales',
 			price:3500,
 			label:'Dorinachos',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Elote Chico',
-			Category:'Chorreados',
+			category:'Chorreados',
 			price:4000,
 			label:'Chico',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Elote Mediano',
-			Category:'Chorreados',
+			category:'Chorreados',
 			price:4500,
 			label:'Mediano',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Elote Medio litro',
-			Category:'Chorreados',
+			category:'Chorreados',
 			price:6500,
 			label:'Medio Litro',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Maruchan',
-			Category:'Chorreados',
+			category:'Chorreados',
 			price:6500,
 			label:'Maruchan',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Dorinachos',
-			Category:'Chorreados',
+			category:'Chorreados',
 			price:6500,
 			label:'Dorinachos',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Refresco',
-			Category:'Extras',
+			category:'Extras',
 			price:1500,
 			label:'Refresco',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Agua',
-			Category:'Extras',
+			category:'Extras',
 			price:1000,
 			label:'Agua',
 			createdAt:new Date(),
 			updatedAt:null
 		},{
 			name:'Ingrediente Extra',
-			Category:'Extras',
+			category:'Extras',
 			price:500,
 			label:'Ingrediente Extra',
 			createdAt:new Date(),
@@ -99,3 +99,4 @@ if (Products.find().count() === 0) {
 	})
 	console.log('added defaultProducts')
 }
+

@@ -13,9 +13,9 @@ Template.login.events({
 	}
 });
 
-Template.login.onRendered(()=>{
+/*Template.login.onRendered(()=>{
+	console.log(Meteor.userId());
 	if (Meteor.user()) {
 		Router.go('/');
 	}
-});
-//'Ay7EicKhkxoyvqYge'
+});*/
