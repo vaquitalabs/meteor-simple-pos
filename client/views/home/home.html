@@ -12,7 +12,17 @@
 		{{> extras}}
 	{{/each}}
 
-	<div id="pre-order">
-		
+	<div>
+		<h2>Orden</h2>
+		{{#each orderProducts}}
+			<ul>
+				<li>Tipo: {{category}}</li>
+				<li>Producto: {{name}}</li>
+				<li>Cantidad: {{quantity}} </li>
+				<li>Precio Unitario {{unit}} </li>
+				<li>Subtotal: {{subtotal}} </li>
+			</ul>
+		{{/each}}
+		<div>{{totalOrder}}</div>
 	</div>
 </template>
