@@ -1,15 +1,19 @@
 <template name="login">
-	<form id="login-form">
-		<div>
-			<label>Usuario</label>
-	 		<input type="text" id="login-username" placeholder="Usuario">
-		</div>
-		<div>
-			<label>Contraseña</label>
-			<input type="password" id="login-password" placeholder="Contraseña">
-		</div>
-		<div>
-			<input type="submit" value="Acceder">
-		</div>
-	</form>
+	<div id="login-page">
+		<img id="login-logo" src="https://upload.wikimedia.org/wikipedia/lt/archive/2/2d/20160422080821%21Fanta_logo.png">
+		<h1>Ventas</h1>
+		{{#if loginError}}
+			<div class="login-error-message">
+				{{ loginError }}
+			</div>
+		{{/if}}
+		<form id="login-form">
+			{{#each formInputs}}
+				{{> underlineInput}}
+			{{/each}}
+			<div>
+				<button class="submit std-btn-yl" type="submit">Entrar</button>
+			</div>
+		</form>
+	</div>
 </template>
