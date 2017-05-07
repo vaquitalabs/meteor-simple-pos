@@ -5,6 +5,7 @@ Template.home.helpers({
 		if (products.length > 0) {
 			for (var i = 0; i <= products.length - 1; i++) {
 				prodOrder.push({
+					id:products[i].productId,
 					name:products[i].productName,
 					quantity:products[i].productQuantity,
 					unit:products[i].productPrice,
@@ -12,7 +13,9 @@ Template.home.helpers({
 					category:products[i].productCategory
 				});	
 			}
+			Session.set('products',prodOrder);
 		}
+
 		var total = 0;
 		if (prodOrder.length > 0) {
 			for (var i = 0; i <= prodOrder.length - 1; i++) {
@@ -24,5 +27,12 @@ Template.home.helpers({
 	},
 	totalOrder:()=>{
 		return Session.get('total');
+	},
+	changeOrder:()=>{
+		if (Session.get('change')) {
+			return Session.get('change') - Session.get('total');
+		}else{
+			return '';
+		}
 	}
 });

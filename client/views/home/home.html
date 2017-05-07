@@ -23,6 +23,10 @@
 				<li>Subtotal: {{subtotal}} </li>
 			</ul>
 		{{/each}}
+		<div><button id="erase-order">Borrar todo</button></div>
 		<div>Total : {{totalOrder}}</div>
+		<div>Cantidad de pago: <input type="number" min="0" value="0" id="payment-amount"></div>
+		<div><button id="set-order">Cobrar</button><span id="change"></span></div>
+		<div>{{changeOrder}}</div>
 	</div>
 </template>
