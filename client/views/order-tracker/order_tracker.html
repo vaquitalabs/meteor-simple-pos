@@ -1,0 +1,43 @@
+<template name="orderTracker">
+	<section id="order-tracker">
+		<div class="step-1">
+			{{#if orderProducts}}
+				<div id="order-headings">
+					{{#each orderHeadings}}
+						<span class="{{class}}">{{label}}</span>
+					{{/each}}
+				</div>
+				<ul id="products-list">
+				{{#each orderProducts}}
+					<li>
+						<span class="name">{{name}}</span>
+						<span class="p-unit">{{unitPrice}}</span>
+						<span class="p-subtotal">{{subtotal}}</span>
+						<span class="qty">{{quantity}}</span>
+					</li>
+				{{/each}}
+				</ul>
+				<div id="order-total">
+					Total
+					<span class="amount">
+						{{totalOrder}}
+					</span>
+				</div>
+
+				<a id="erase-order" class="std-btn-cancel">Borrar Orden</a>
+
+				<a id="proceed-to-payment" class="std-btn-grn">
+					Continuar al Pago
+				</a>
+			{{else}}
+				<h4 id="empty-order">Comienza por agregar productos.</h4>
+			{{/if}}
+		</div>
+
+		<div class="step-2">
+			<div>Cantidad de pago: <input type="number" min="0" value="0" id="payment-amount"></div>
+			<div><span id="change"></span></div>
+			<div>{{changeOrder}}</div>
+		</div>
+	</section>
+</template>

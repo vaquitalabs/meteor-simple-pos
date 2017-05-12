@@ -1,32 +1,5 @@
 <template name="home">
-	<h2>Tradicionales</h2>
-	{{#each productTraditional}}
-		{{> tradicionales}}
-	{{/each}}
-	<h2>Chorreados</h2>
-	{{#each productChorreado}}
-		{{> chorreados}}
-	{{/each}}
-	<h2>Extras</h2>
-	{{#each productExtra}}
-		{{> extras}}
-	{{/each}}
-
-	<div>
-		<h2>Orden</h2>
-		{{#each orderProducts}}
-			<ul>
-				<li>Tipo: {{category}}</li>
-				<li>Producto: {{name}}</li>
-				<li>Cantidad: {{quantity}} </li>
-				<li>Precio Unitario {{unit}} </li>
-				<li>Subtotal: {{subtotal}} </li>
-			</ul>
-		{{/each}}
-		<div><button id="erase-order">Borrar todo</button></div>
-		<div>Total : {{totalOrder}}</div>
-		<div>Cantidad de pago: <input type="number" min="0" value="0" id="payment-amount"></div>
-		<div><button id="set-order">Cobrar</button><span id="change"></span></div>
-		<div>{{changeOrder}}</div>
-	</div>
+	{{> header}}
+	{{> productsCatalog}}
+	{{> orderTracker}}
 </template>

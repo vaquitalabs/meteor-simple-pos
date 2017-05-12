@@ -1,0 +1,22 @@
+<template name="productsCatalog">
+	<section id="products-catalog">
+		<div class="catalog-section traditional">
+			<h2 class="category-title">Tradicionales</h2>
+			{{#each productTraditional}}
+				{{> productOption}}
+			{{/each}}
+		</div>
+		<div class="catalog-section chorreados">
+			<h2 class="category-title">Chorreados</h2>
+			{{#each productChorreado}}
+				{{> productOption}}
+			{{/each}}
+			</div>
+		<div class="catalog-section extras">
+			<h2 class="category-title">Extras</h2>
+			{{#each productExtra}}
+				{{> productOption}}
+			{{/each}}
+		</div>
+	</section>
+</template>
