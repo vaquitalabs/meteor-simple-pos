@@ -4,6 +4,17 @@ Template.orderTracker.events({
 		Session.set('order',order);
 	},
 	'click #proceed-to-payment':() => {
+		
+		$('#payment-modal').css('display','block');
+		/*console.log(modal);
+		modal.style.display = "block";*/
+	},
+	'click #close-modal':()=>{
+		$('#payment-modal').css('display','none');
+		console.log('entro??');
+	},
+	'click #finish-sale':(ev)=>{
+		console.log('entro??');
 		var amount = $('#payment-amount').val();
 		var productsOrder = Session.get('products');
 		var total = Session.get('total');

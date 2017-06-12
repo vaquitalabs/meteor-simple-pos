@@ -33,11 +33,6 @@
 				<h4 id="empty-order">Comienza por agregar productos.</h4>
 			{{/if}}
 		</div>
-
-		<div class="step-2">
-			<div>Cantidad de pago: <input type="number" min="0" value="0" id="payment-amount"></div>
-			<div><span id="change"></span></div>
-			<div>{{changeOrder}}</div>
-		</div>
 	</section>
+	{{> payment}}
 </template>

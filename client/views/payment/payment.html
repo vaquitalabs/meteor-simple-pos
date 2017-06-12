@@ -1,0 +1,20 @@
+<template name="payment">
+	<div class="modal" id="payment-modal">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <span class="close" id="close-modal">X</span>
+		    <h3>Pago</h3>
+		  </div>
+		  <div class="modal-body">
+		    <div class="step-2">
+				<div>Cantidad de pago: <input type="number" min="0" value="0" id="payment-amount"></div>
+				<div><span id="change"></span></div>
+				<div>{{changeOrder}}</div>
+			</div>
+		  </div>
+		  <div class="modal-footer">
+		    <button id="finish-sale" class="std-btn-grn">Terminar Compra</button>
+		  </div>
+		</div>
+	</div>
+</template>
