@@ -1,5 +1,8 @@
 Meteor.methods({
     'createSale':(obj)=>{
-    	Sales.insert(obj);
+    	var test = Sales.insert(obj);
+
+    	console.log(Sales.findOne({_id:test}));
+
     },
 });

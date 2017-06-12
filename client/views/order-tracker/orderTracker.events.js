@@ -11,12 +11,12 @@ Template.orderTracker.events({
 	},
 	'click #close-modal':()=>{
 		$('#payment-modal').css('display','none');
-		console.log('entro??');
 	},
 	'click #finish-sale':(ev)=>{
-		console.log('entro??');
+		//console.log('entro??');
 		var amount = $('#payment-amount').val();
 		var productsOrder = Session.get('products');
+		console.log(productsOrder);
 		var total = Session.get('total');
 		if (amount === 0 || amount < total) {
 			$('#change').text('el pago tiene que ser igual o mayor que el total').fadeIn().fadeOut(3000);
@@ -24,7 +24,6 @@ Template.orderTracker.events({
 			Session.set('change',amount);
 			var sale = {
 				createdAt:new Date(),
-				day:moment().format('dd/mm/yyyy'),
 				createdBy:Meteor.userId(),
 				products:productsOrder,
 				total:total
@@ -33,6 +32,7 @@ Template.orderTracker.events({
 			order = [];
 			Session.set('order',order);
 			Meteor.call('createSale',sale);
+			$('#payment-modal').css('display','none');
 		}
 	}
 });

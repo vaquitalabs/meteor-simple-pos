@@ -16,11 +16,14 @@ Template.productOption.events({
 		};
 
 		if (order.length > 0) {
+			let total = 0;
 			for (let i = 0; i < order.length; i++) {
 				if (orderProduct.id === order[i].id) {
 					exist = true;
 					++order[i].quantity;
 					order[i].subtotal = (product.price * order[i].quantity) / 100;
+					total = total + order[i].subtotal;
+					Session.set('total',total);
 					break;
 				}
 			}
@@ -36,10 +39,14 @@ Template.productOption.events({
 		let exist = false;
 
 		if (order.length > 0) {
+			let total = Session.get('total');
 			for (let i = 0; i < order.length; i++) {
 				if (product._id === order[i].id) {
 					exist = true;
 					--order[i].quantity;
+					//console.log(product.price);
+					total = total - (product.price / 100);
+					Session.set('total',total);
 					if (order[i].quantity === 0) order.splice(i, 1);
 					break;
 				}
