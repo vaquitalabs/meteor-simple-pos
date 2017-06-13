@@ -6,8 +6,8 @@ Template.orderTracker.events({
 	'click #proceed-to-payment':() => {
 		
 		$('#payment-modal').css('display','block');
-		/*console.log(modal);
-		modal.style.display = "block";*/
+		var products = Session.get('order');
+		Session.set('products',products);
 	},
 	'click #close-modal':()=>{
 		$('#payment-modal').css('display','none');

@@ -22,10 +22,12 @@ Template.productOption.events({
 					exist = true;
 					++order[i].quantity;
 					order[i].subtotal = (product.price * order[i].quantity) / 100;
-					total = total + order[i].subtotal;
-					Session.set('total',total);
 					break;
 				}
+			}
+			for (let i = 0; i < order.length; i++) {
+				total = total + (order[i].unitPrice * order[i].quantity);
+				Session.set('total',total);
 			}
 		}
 
